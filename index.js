@@ -269,7 +269,6 @@ export default class TextMarquee extends PureComponent {
         >
           <Animated.Text
             ref={c => (this.textRef = c)}
-            numberOfLines={1}
             {... props}
             style={[style, { transform: [{ translateX: this.animatedValue }], width: null }]}
           >
@@ -278,7 +277,6 @@ export default class TextMarquee extends PureComponent {
           {!contentFits && !isScrolling
             ? <View style={{ paddingLeft: repeatSpacer }}>
               <Animated.Text
-                numberOfLines={1}
                 {... props}
                 style={[style, { transform: [{ translateX: this.animatedValue }], width: null }]}
               >
